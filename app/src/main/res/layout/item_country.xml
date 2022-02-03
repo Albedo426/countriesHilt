@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <data>
+
+        <variable
+            name="MyModel"
+            type="com.example.countiresulkeler.model.Country" />
+
+        <variable
+            name="listener"
+            type="com.example.countiresulkeler.adapter.CountryClickListener" />
+    </data>
+<androidx.cardview.widget.CardView
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:onClick="@{listener::onCountryClick}"
+    android:layout_margin="5dp">
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="150dp"
+       >
+        <TextView
+            android:id="@+id/myCardId"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@{String.valueOf(MyModel.UUID)}"
+            android:visibility="gone"
+            />
+        <ImageView
+            android:id="@+id/imageView"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="2"
+            android:downloadUrl="@{MyModel.countryImgUrl}"
+            android:src="@mipmap/ic_launcher_round"
+            android:padding="3dp"/>
+        <LinearLayout
+            android:gravity="center"
+            android:orientation="vertical"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="5"
+            android:padding="3dp">
+            <TextView
+                android:id="@+id/name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@{MyModel.countryName}"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                android:padding="3dp">
+
+            </TextView>
+            <TextView
+                android:id="@+id/region"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@{MyModel.countryRegion}"
+                android:padding="3dp">
+
+            </TextView>
+        </LinearLayout>
+    </LinearLayout>
+</androidx.cardview.widget.CardView>
+</layout>
