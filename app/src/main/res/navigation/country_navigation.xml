@@ -6,7 +6,7 @@
 
     <fragment
         android:id="@+id/feedFragment"
-        android:name="com.example.countiresulkeler.view.FeedFragment"
+        android:name="com.example.countiresulkeler.ui.feed_page_fragment.FeedFragment"
         android:label="FeedFragment" >
         <action
             android:id="@+id/action_feedFragment_to_countryFragment"
@@ -14,7 +14,7 @@
     </fragment>
     <fragment
         android:id="@+id/countryFragment"
-        android:name="com.example.countiresulkeler.view.CountryFragment"
+        android:name="com.example.countiresulkeler.ui.country_single_page_fragmet.CountryFragment"
         android:label="CountryFragment" >
         <action
             android:id="@+id/action_countryFragment_to_feedFragment"

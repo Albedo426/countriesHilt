@@ -1,4 +1,4 @@
-package com.example.countiresulkeler.adapter
+package com.example.countiresulkeler.ui.feed_page_fragment.adapter
 
 import android.view.View
 

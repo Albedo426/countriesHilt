@@ -8,12 +8,12 @@
 
         <variable
             name="MyModel"
-            type="com.example.countiresulkeler.model.Country" />
+            type="com.example.countiresulkeler.app.model.Country" />
     </data>
     <androidx.constraintlayout.widget.ConstraintLayout
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".view.CountryFragment">
+    tools:context=".ui.country_single_page_fragmet.CountryFragment">
 
 
     <ImageView

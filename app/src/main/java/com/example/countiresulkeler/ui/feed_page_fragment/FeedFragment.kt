@@ -1,29 +1,30 @@
-package com.example.countiresulkeler.view
+package com.example.countiresulkeler.ui.feed_page_fragment
 
 import android.os.Bundle
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.fragment.app.activityViewModels
 import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProviders
 import androidx.recyclerview.widget.LinearLayoutManager
-import com.example.countiresulkeler.adapter.CounrtyAdapter
+import com.example.countiresulkeler.ui.feed_page_fragment.adapter.CounrtyAdapter
 import com.example.countiresulkeler.R
-import com.example.countiresulkeler.viewmodel.FeedViewModel
+import dagger.hilt.android.AndroidEntryPoint
 import kotlinx.android.synthetic.main.fragment_feed.*
 
 // TODO: Rename parameter arguments, choose names that match
 
 class FeedFragment : Fragment() {
     // TODO: Rename and change types of parameters
-    private lateinit var viewModel:FeedViewModel
+    private  val viewModel: FeedViewModel by activityViewModels()
+
     private   var counrtyAdapter= CounrtyAdapter(arrayListOf())
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
 
     }
-
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
@@ -34,7 +35,7 @@ class FeedFragment : Fragment() {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-        viewModel=ViewModelProviders.of(this).get(FeedViewModel::class.java)
+       // viewModel=ViewModelProviders.of(this).get(FeedViewModel::class.java)
         viewModel.refreshData()
 
         countryListRecyclerView.layoutManager=LinearLayoutManager(context)

@@ -1,10 +1,10 @@
-package com.example.countiresulkeler.service
+package com.example.countiresulkeler.app.service
 
 import android.content.Context
 import androidx.room.Database
 import androidx.room.Room
 import androidx.room.RoomDatabase
-import com.example.countiresulkeler.model.Country
+import com.example.countiresulkeler.app.model.Country
 
 // veri tabanına ekleme işlemi eğer veri tabanına birden fazla talbo ekleyecek isen array of yerine , ile farklı entitityi eklemelisin
 @Database(entities = arrayOf(Country::class),version = 1)

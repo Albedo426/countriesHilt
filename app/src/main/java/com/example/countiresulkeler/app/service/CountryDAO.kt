@@ -1,10 +1,9 @@
-package com.example.countiresulkeler.service
+package com.example.countiresulkeler.app.service
 
 import androidx.room.Dao
 import androidx.room.Insert
 import androidx.room.Query
-import androidx.room.Update
-import com.example.countiresulkeler.model.Country
+import com.example.countiresulkeler.app.model.Country
 
 @Dao
 interface CountryDAO {

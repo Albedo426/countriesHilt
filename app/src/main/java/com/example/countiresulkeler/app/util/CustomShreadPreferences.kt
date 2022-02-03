@@ -1,15 +1,13 @@
-package com.example.countiresulkeler.util
+package com.example.countiresulkeler.app.util
 
 import android.content.Context
 import android.content.SharedPreferences
 import androidx.core.content.edit
 import androidx.preference.PreferenceManager
-import androidx.room.Room
-import com.example.countiresulkeler.service.CountryDataBase
 
 class CustomSharedPreferences {
     companion object{
-        private val PREFERENCES_TIME="time"
+        private const val PREFERENCES_TIME="time"
         private var sharedPreferences:SharedPreferences?=null
         @Volatile private var instance: CustomSharedPreferences?=null
         private val lock=Any()

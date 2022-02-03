@@ -1,20 +1,20 @@
-package com.example.countiresulkeler.viewmodel
+package com.example.countiresulkeler.ui.feed_page_fragment
 
 import android.app.Application
 import android.widget.Toast
 import androidx.lifecycle.MutableLiveData
-import androidx.lifecycle.ViewModel
-import com.example.countiresulkeler.model.Country
-import com.example.countiresulkeler.service.CountryApıServices
-import com.example.countiresulkeler.service.CountryDataBase
-import com.example.countiresulkeler.util.CustomSharedPreferences
+import com.example.countiresulkeler.app.base.BaseViewModel
+import com.example.countiresulkeler.app.model.Country
+import com.example.countiresulkeler.app.service.CountryApıServices
+import com.example.countiresulkeler.app.service.CountryDataBase
+import com.example.countiresulkeler.app.util.CustomSharedPreferences
 import io.reactivex.android.schedulers.AndroidSchedulers
 import io.reactivex.disposables.CompositeDisposable
 import io.reactivex.observers.DisposableSingleObserver
 import io.reactivex.schedulers.Schedulers
 import kotlinx.coroutines.launch
 
-class FeedViewModel(application:Application):BaseViewModel(application) {
+class FeedViewModel(application:Application): BaseViewModel(application) {
     private val countryApıServices=CountryApıServices()
     private val disposse=CompositeDisposable()
     //kullan at objesi  birden fazla call yaparken kullanıyoruz

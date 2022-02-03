@@ -1,6 +1,6 @@
-package com.example.countiresulkeler.service
+package com.example.countiresulkeler.app.service
 
-import com.example.countiresulkeler.model.Country
+import com.example.countiresulkeler.app.model.Country
 import io.reactivex.Single
 import retrofit2.http.GET
 

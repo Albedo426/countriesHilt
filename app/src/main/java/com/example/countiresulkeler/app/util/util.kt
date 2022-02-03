@@ -1,4 +1,4 @@
-package com.example.countiresulkeler.util
+package com.example.countiresulkeler.app.util
 
 import android.content.Context
 import android.widget.ImageView

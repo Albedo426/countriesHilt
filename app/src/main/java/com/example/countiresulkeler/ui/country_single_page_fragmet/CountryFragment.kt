@@ -1,4 +1,4 @@
-package com.example.countiresulkeler.view
+package com.example.countiresulkeler.ui.country_single_page_fragmet
 
 import android.os.Bundle
 import android.util.Log
@@ -7,20 +7,17 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.databinding.DataBindingUtil
+import androidx.fragment.app.activityViewModels
 import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProviders
 import com.example.countiresulkeler.R
 import com.example.countiresulkeler.databinding.FragmentCountryBinding
-import com.example.countiresulkeler.util.downloadFromUrl
-import com.example.countiresulkeler.util.placeHolderProgressBar
-import com.example.countiresulkeler.viewmodel.CountryViewModel
-import kotlinx.android.synthetic.main.fragment_country.*
 
 // TODO: Rename parameter arguments, choose names that match
 // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
 
 class CountryFragment : Fragment() {
-    private lateinit var viewModel: CountryViewModel
+    private  val viewModel: CountryViewModel by activityViewModels()
     private var myId=0
     private lateinit var  dataBinding:FragmentCountryBinding
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -39,7 +36,7 @@ class CountryFragment : Fragment() {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-        viewModel= ViewModelProviders.of(this).get(CountryViewModel::class.java)
+       // viewModel= ViewModelProviders.of(this).get(CountryViewModel::class.java)
 
         arguments?.let{
             myId=CountryFragmentArgs.fromBundle(it).countryId

@@ -1,10 +1,9 @@
-package com.example.countiresulkeler.model
+package com.example.countiresulkeler.app.model
 
 import androidx.room.ColumnInfo
 import androidx.room.Entity
 import androidx.room.PrimaryKey
 import com.google.gson.annotations.SerializedName
-import java.util.*
 
 @Entity//tablo adını () ekleyip içine tabloname şeklnde ekleyebilirim aksi taktirde Country
 data class Country(

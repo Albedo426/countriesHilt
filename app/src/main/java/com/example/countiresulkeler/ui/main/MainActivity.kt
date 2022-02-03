@@ -1,4 +1,4 @@
-package com.example.countiresulkeler.view
+package com.example.countiresulkeler.ui.main
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle

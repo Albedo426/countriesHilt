@@ -6,11 +6,11 @@
 
         <variable
             name="MyModel"
-            type="com.example.countiresulkeler.model.Country" />
+            type="com.example.countiresulkeler.app.model.Country" />
 
         <variable
             name="listener"
-            type="com.example.countiresulkeler.adapter.CountryClickListener" />
+            type="com.example.countiresulkeler.ui.feed_page_fragment.adapter.CountryClickListener" />
     </data>
 <androidx.cardview.widget.CardView
     android:layout_width="match_parent"
@@ -52,7 +52,6 @@
                 android:textSize="20sp"
                 android:textStyle="bold"
                 android:padding="3dp">
-
             </TextView>
             <TextView
                 android:id="@+id/region"
@@ -60,7 +59,6 @@
                 android:layout_height="wrap_content"
                 android:text="@{MyModel.countryRegion}"
                 android:padding="3dp">
-
             </TextView>
         </LinearLayout>
     </LinearLayout>
